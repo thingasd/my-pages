@@ -1,25 +1,49 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Hello World</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="white"/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />  
-  <link rel="apple-touch-icon" href="images/hello-icon-152.png">   
-  <meta name="theme-color" content="white"/>  
-  <meta name="apple-mobile-web-app-capable" content="yes">  
-  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
-  <meta name="apple-mobile-web-app-title" content="Hello World"> 
-  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+  <meta name="theme-color" content="white" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+  <meta name="theme-color" content="white" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hello World">
+  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body class="fullscreen">
   <div class="container">
     <h1 class="title">Hello World!</h1>
+    <div>
+      <input type="text" placeholder="Enter YouTube video link" id="link">
+      <button type="button" id="run" class="btn btn-primary">Run</button>
+    </div>
+    <iframe src="" frameborder="0" id="api_iframe" class="w-100 mt-2"></iframe>
   </div>
   <script src="js/main.js"></script>
+  <script>
+    $('#run').click(()=>{      
+    const id = $('#link').val().substr($('#link').val().length - 11);
+    console.log(id)
+    $('#api_iframe').attr('src', `https://www.yt-download.org/api/button/mp3/${id}`);
+    })
+
+    function downloadMP3(){
+      document.querySelector('.download>a').click();
+    }
+  </script>
 </body>
+
 </html>
+
+<!-- tnCyf58SyWM -->
