@@ -1,9 +1,9 @@
 var cacheName = 'my-pages';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/main.js'
+  '/my-pages/',
+  '/my-pages/index.html',
+  '/my-pages/css/style.css',
+  '/my-pages/js/main.js'
 ];
 
 /* Start the service worker and cache all of the app's content */
