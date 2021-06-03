@@ -29,19 +29,9 @@
       <button type="button" id="run" class="btn btn-primary">Run</button>
     </div>
     <iframe src="" frameborder="0" id="api_iframe" class="w-100 mt-2 h-100"></iframe>
+    <button id="notifications">notifications</button>
   </div>
   <script src="js/main.js"></script>
-  <script>
-    $('#run').click(()=>{      
-    const id = $('#link').val().substr($('#link').val().length - 11);
-    console.log(id)
-    $('#api_iframe').attr('src', `https://www.yt-download.org/api/button/mp3/${id}`);
-    })
-
-    function downloadMP3(){
-      document.querySelector('.download>a').click();
-    }
-  </script>
 </body>
 
 </html>
